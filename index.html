@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADITYA GAIKWAD   </title>
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header class="nav">
-    <nav >
-        <div class="nav-container">
+    <header >
+    <nav class="nav-container nav">
             <a href="/" style="text-decoration: none; color: #DFF6FF">
             <h1 class="navhead">ADITYA GAIKWAD</h1>
         </a>
-        </div>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#work">Work</a>
+        <a class="link" href="#contact">Contact</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a href="#modal-one">  <span class="navbar-toggler-icon"></span> </a>
+          </button>
+
     </nav>
 </header>
     <section class="header">
@@ -33,7 +39,7 @@
             </div>
       
         </section>
-        <section class="about">
+        <section class="about" id="about">
        
          
 
@@ -45,7 +51,7 @@
              <br>
              here are some technologies I have learned:
                 <div class="card-container">
-                <div class="card">
+                <div class="card card-back">
                     <div class="card-head">
                         
                         <img class="card-img" src="./images/nodejs.svg" alt="Node js logo">
@@ -64,7 +70,7 @@
                     
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-back">
                     <div class="card-head">
                         
                         <img class="card-img" src="./images/express.png" style="padding-top: 0;" alt="Express js logo">
@@ -82,7 +88,7 @@
 
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-back">
                     <div class="card-head">
                         
                         <img class="card-img" src="./images/react.svg" alt="React js logo">
@@ -102,7 +108,7 @@
 
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-back">
                     <div class="card-head">
                         
                         <img class="card-img" src="./images/mongodb.svg" alt="MongoDB logo">
@@ -125,7 +131,7 @@
            
             </p>
         </section>
-        <section class="work" >
+        <section class="work" id="work">
             <h1>Things I have built</h1>
             <div class="card-container2">
                 <div class="card">
@@ -192,7 +198,7 @@
             more coming soon...
 
         </section>
-        <section class="contact about">
+        <section class="contact about" id="contact">
             <center>
                 <h1>Let's Talk</h1>
             <div class="form-container">
@@ -200,7 +206,7 @@
 
                 <form >
                     <!-- <div class="form-50"> -->
-                        <input type="text"  placeholder="Name" name="Name"   autocomplete="off" class="form-cont"    id="">
+                        <input type="text"  placeholder="Name" name="Name"    autocomplete="off" class="form-cont"    id="">
                         <input type="email" placeholder="Email" name="Email" autocomplete="off"  class="form-cont"  id="">
                         
                         <input type="text"  placeholder="Message" name="Message" autocomplete="off" class="form-cont" id="">
@@ -238,5 +244,19 @@
             </div>
 
         </section>
+        <div class="modal" id="modal-one" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-header">
+                <h2>Modal in CSS?</h2>
+                <a href="#close" class="btn-close" aria-hidden="true">×</a> <!--CHANGED TO "#close"-->
+              </div>
+              <div class="modal-body">
+                <p>One modal example here! :D</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#close" class="btn">Nice!</a>  <!--CHANGED TO "#close"-->
+              </div>
+              </div>
+            </div>
 </body>
 </html>

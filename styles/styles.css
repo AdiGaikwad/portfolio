@@ -3,7 +3,12 @@ body{
      margin: 0;
      color: #DFF6FF;
      background-color: #06283D;
-   
+     padding-top: 70px;
+ }
+
+ html{
+    scroll-behavior: smooth;
+
  }
  ::selection{
     background-color: #001f33;
@@ -32,6 +37,14 @@ body{
     background: linear-gradient(176deg, rgba(6,40,61,1) 0%, rgba(53,66,89,1) 84%); */
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(314deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
 }
+.link{
+    text-decoration: none;
+    color: #DFF6FF;
+}
+.link:hover{
+    color: #107be6;
+    transition: 250ms all;
+}
 
 .nav{
     position: fixed;
@@ -39,13 +52,33 @@ body{
     background-color: rgb(0, 31, 51, 0.5);
     backdrop-filter: blur(24px);
     width: 100%;
-    height: 80px;
+    height: 70px;
     z-index: 1;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+    
 }
-
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.navbar-toggler{
+    background-color: transparent;
+    border: transparent;
+font-size: 1.5rem;
+color: #DFF6FF;
+}
 .navhead{
-    padding-left: 20px;
-    padding-bottom: 20px;
+    /* padding-left: 20px; */
+    /* padding-bottom: 20px; */
 }
 .head-title{
     /* position: absolute; */
@@ -139,6 +172,8 @@ body{
     height: 100%;
     font-size: 1.2rem;
     background-color: #08598b;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(350deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%); */
+
 cursor: pointer;
 }
 .btn:hover{
@@ -157,19 +192,29 @@ cursor: pointer;
     height: 150px;
 }
 .card{
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(40px);
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px;
     width: calc((100vw - 35px)/6);
     padding: 20px;
     border-radius: 10%;
-    background-color: rgb(0, 31, 51, 0.6);
+    background-color: rgb(0, 31, 51, 0.2);
     height: var(--card);
+
+}
+.card-back:hover{
+    box-shadow: rgb(0 0 0 / 79%) 0px 36px 40px -5px;
+    transition: 250ms all;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(316deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
+    backdrop-filter: blur(2px) saturate(1px);
+    background-color: rgba(7, 55, 87, 0.1);
 
 }
 .card:hover{
     box-shadow: rgb(0 0 0 / 79%) 0px 36px 40px -5px;
     transition: 250ms all;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(316deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(316deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%); */
+    backdrop-filter: blur(2px) ;
+    background-color: rgba(7, 55, 87, 0.1);
 
 }
 .card-img{
@@ -183,17 +228,22 @@ cursor: pointer;
 }
 
 .logo{
-    padding: 20px;
+    padding: 25px;
     width: 20px;
     color: #DFF6FF;
+    background-color: rgb(0, 31, 51, 0.2);
+    border-radius: 40%;
+    backdrop-filter: blur(4px);
 }
 .logo:hover{
     color: #68bcf0;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .footer{
     text-align: center;
+    padding: 6%;
 }
+
 .form-container{
     text-align: center;
     padding: 50px;
@@ -287,6 +337,16 @@ cursor: pointer;
     .head-title> h2 {
      
         font-size: clamp(10px, 2vw, 20px);
+    }
+}
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 992px){
+    .link {
+        display: none;
     }
 }
 @media only screen and (max-width: 900px){
