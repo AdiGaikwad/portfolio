@@ -339,17 +339,12 @@ cursor: pointer;
         font-size: clamp(10px, 2vw, 20px);
     }
 }
-@media (min-width: 992px) {
-    .navbar-toggler {
-        display: none;
-    }
-  }
-  @media only screen and (max-width: 992px){
-    .link {
-        display: none;
-    }
-}
+
+
 @media only screen and (max-width: 900px){
+    .navhead{
+        font-size: 1rem;
+    }
     .form-container{
     width: calc((100vw - 20px)/ 2);
 
