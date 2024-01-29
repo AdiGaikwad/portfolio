@@ -154,14 +154,19 @@ color: #DFF6FF;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(350deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
 }
 .card-container{
-    grid-gap: calc((100vw - 50px)/11);
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(165px,1fr));
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: column; */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 .card-container2{
-    grid-gap: calc((100vw - 50px)/6);
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(165px,1fr));
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: column; */
+    gap: 30px;
+
+    flex-wrap: wrap;
 }
 .btn{
     border: #001f33;
